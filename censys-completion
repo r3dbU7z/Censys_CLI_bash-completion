@@ -1,0 +1,27 @@
+#!/bin/bash
+
+_censys()
+{
+  #Path to the file with all options
+  local _censys_options=$(cat /etc/censys/_censys_options) #<-- EDIT THIS
+  
+  local cur=${COMP_WORDS[COMP_CWORD]}
+
+  #We need help now!
+  if [[ "${cur}" == -* ]] ; then
+	COMPREPLY=($(compgen -W "-h -v --help --version"  -S '  ' -- "${cur}"))
+  elif
+  #Comp. for first arguments
+  [[ ${COMP_CWORD} == 1 ]] ; then
+	COMPREPLY=($(compgen -W "account asm config hnri subdomains search view"  -S ' ' -- "${cur}"))
+  else
+    case $cur in
+      *)
+		compopt -o nospace
+        COMPREPLY=($(compgen -W "${_censys_options[*]}" -S ':' -- "${cur}"))
+		;;
+    esac
+  fi
+}
+
+complete -F _censys censys
