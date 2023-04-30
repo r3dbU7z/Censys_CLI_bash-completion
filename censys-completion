@@ -19,7 +19,7 @@ _censys()
       *)
 	compopt -o nospace
         COMPREPLY=($(compgen -W "${_censys_options[*]}" -S ':' -- "${cur}"))
-		;;
+	;;
     esac
   fi
 }
