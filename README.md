@@ -24,7 +24,7 @@ or
 	```.../dev/bash_completion.d/censys-completion```
 
 3. 
-Edit your '/etc/bash_completion' file for connection 'censys-completion'
+Edit your ```/etc/bash_completion``` file for connection **censys-completion** script
 
 Example:
 ```console
