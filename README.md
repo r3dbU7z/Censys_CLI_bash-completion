@@ -35,7 +35,7 @@ source $_CMP_PATH/censys-completion
 ```
 4. 
 Check this line in **censys-completion** file
-```
+```console
   #Path to the file with all options
   local _censys_options=$(cat /etc/censys/_censys_options) #<-- EDIT THIS
 ```
