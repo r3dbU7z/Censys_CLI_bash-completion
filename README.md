@@ -44,3 +44,6 @@ Check this line in **censys-completion** file
 EOF
 
 ![censys](https://i.ibb.co/KXt4pPK/censys.png)
+
+See also "Zsh-shell autocompletion for Censys CLI. ( .zshrc )"
+![zsh-completion](https://gist.github.com/r3dbU7z/2080e1f4a8721e6ef36fd6192918c90c)
